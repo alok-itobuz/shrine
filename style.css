@@ -7,11 +7,15 @@
 }
 
 nav .navbar-brand {
+  order: -1;
   height: 2rem;
   overflow: hidden;
 }
 nav .navbar-brand img {
   height: 100%;
+}
+nav button {
+  order: -1;
 }
 
 #hero .house-image-container {
@@ -163,13 +167,6 @@ nav .navbar-brand img {
 }
 
 @media (min-width: 768px) {
-  nav .navbar-brand {
-    height: 2rem;
-    overflow: hidden;
-  }
-  nav .navbar-brand img {
-    height: 100%;
-  }
   #hero .house-image-container {
     height: 25rem;
   }
@@ -267,6 +264,17 @@ nav .navbar-brand img {
   }
 }
 @media (min-width: 992px) {
+  nav .navbar-brand {
+    order: unset;
+    height: 2rem;
+    overflow: hidden;
+  }
+  nav .navbar-brand img {
+    height: 100%;
+  }
+  nav button {
+    order: unset;
+  }
   #hero .house-image-container,
   #hero .book-pen-image-container {
     height: 35rem;

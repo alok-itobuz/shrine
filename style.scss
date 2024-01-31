@@ -40,11 +40,15 @@ $font_inter: "Inter", sans-serif;
 }
 nav {
   .navbar-brand {
+    order: -1;
     height: 2rem;
     overflow: hidden;
     img {
       height: 100%;
     }
+  }
+  button {
+    order: -1;
   }
 }
 #hero {
@@ -159,15 +163,6 @@ nav {
   }
 }
 @media (min-width: 768px) {
-  nav {
-    .navbar-brand {
-      height: 2rem;
-      overflow: hidden;
-      img {
-        height: 100%;
-      }
-    }
-  }
   #hero {
     .house-image-container {
       height: 25rem;
@@ -259,6 +254,19 @@ nav {
   }
 }
 @media (min-width: 992px) {
+  nav {
+    .navbar-brand {
+      order: unset;
+      height: 2rem;
+      overflow: hidden;
+      img {
+        height: 100%;
+      }
+    }
+    button {
+      order: unset;
+    }
+  }
   #hero {
     .house-image-container,
     .book-pen-image-container {
