@@ -6,6 +6,12 @@
   font-family: "Poppins", sans-serif;
 }
 
+nav .nav-links-container .navbar-collapse .nav-link {
+  font-size: 0.6rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #232526;
+}
 nav .navbar-brand {
   order: -1;
   height: 2rem;
@@ -14,8 +20,21 @@ nav .navbar-brand {
 nav .navbar-brand img {
   height: 100%;
 }
+nav .nav-link {
+  height: 1.5rem;
+}
 nav button {
   order: -1;
+  border: none !important;
+}
+nav .route-container a,
+nav .route-container span {
+  color: #232526;
+  font-size: 0.6rem;
+}
+nav .route-container a.active,
+nav .route-container span.active {
+  color: #747a82;
 }
 
 #hero .house-image-container {
@@ -165,8 +184,73 @@ nav button {
   background: #232526;
   color: #fcfcfc;
 }
+#events .row .event-pagination {
+  height: 1.5rem;
+}
+#events .row .event-pagination > button {
+  font-size: 0.7rem;
+  height: 100%;
+  aspect-ratio: 1/1;
+  border: 1px solid #ddd;
+  color: #232526;
+}
+#events .row .event-pagination > button.active {
+  border: 1px solid #c0304f;
+  background: #c0304f;
+  color: #fcfcfc;
+}
+
+footer {
+  background: url(./images/footer/footer_bg.png);
+}
+footer > .container-fluid:first-child {
+  border-bottom: 1px solid #333739;
+}
+footer > .container-fluid:first-child .footer-logo-row .logo-container {
+  height: 2rem;
+}
+footer > .container-fluid:first-child .footer-logo-row > p {
+  font-size: 0.75rem;
+  color: #929292;
+}
+footer > .container-fluid:nth-child(2) {
+  border-bottom: 1px solid #333739;
+}
+footer > .container-fluid:nth-child(2) .footer-body .row .links-col > h5 {
+  color: #fcfcfc;
+  font-size: 0.8rem;
+}
+footer > .container-fluid:nth-child(2) .footer-body .row .links-col > p,
+footer > .container-fluid:nth-child(2) .footer-body .row .links-col a {
+  text-decoration: none;
+  color: #929292;
+  font-size: 0.7rem;
+}
+footer > .container-fluid:nth-child(2) .footer-body .row .links-col input {
+  font-size: 0.7rem;
+  background: #2f3032;
+  color: #626366;
+}
+footer > .container-fluid:nth-child(2) .footer-body .row .links-col button {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.7rem;
+  color: #fcfcfc;
+  background: #c0304f;
+}
+footer .container-fluid:last-child .copyright-row > p {
+  color: #929292;
+  font-size: 0.7rem;
+}
+footer .container-fluid:last-child .copyright-row .icon-container {
+  height: 1.2rem;
+  max-width: 15rem;
+}
 
 @media (min-width: 768px) {
+  nav .nav-links-container .navbar-collapse .nav-link {
+    font-size: 0.7rem;
+  }
   #hero .house-image-container {
     height: 25rem;
   }
@@ -262,18 +346,41 @@ nav button {
   #events .row .card-container .card-wrapper .card-body .content > button {
     font-size: 0.75rem;
   }
+  footer > .container-fluid:nth-child(2) .footer-body .row .links-col:not(:nth-child(4)) {
+    width: 22% !important;
+  }
+  footer > .container-fluid:nth-child(2) .footer-body .row .links-col:nth-child(4) {
+    width: 34% !important;
+  }
 }
 @media (min-width: 992px) {
-  nav .navbar-brand {
-    order: unset;
-    height: 2rem;
-    overflow: hidden;
+  nav {
+    height: 4rem;
+    border-bottom: 2px solid #ddd;
   }
-  nav .navbar-brand img {
-    height: 100%;
+  nav .navbar-brand {
+    background: #fff;
+    position: absolute;
+    top: 0.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-right: 0 !important;
+    height: 4.3rem;
+  }
+  nav .nav-link img {
+    height: 1rem !important;
   }
   nav button {
     order: unset;
+  }
+  nav .router-navbar-collapse {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 4.5rem;
+  }
+  nav .router-navbar-collapse a {
+    font-size: 0.7rem;
   }
   #hero .house-image-container,
   #hero .book-pen-image-container {
