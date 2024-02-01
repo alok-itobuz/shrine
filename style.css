@@ -13,7 +13,6 @@ nav .nav-links-container .navbar-collapse .nav-link {
   color: #232526;
 }
 nav .navbar-brand {
-  order: -1;
   height: 2rem;
   overflow: hidden;
 }
@@ -22,18 +21,25 @@ nav .navbar-brand img {
 }
 nav .nav-link {
   height: 1.5rem;
+  border-bottom: 2px solid transparent;
+}
+nav .nav-link:hover {
+  -o-border-image: linear-gradient(to right, #c0304f 65%, white 38%, white 75%, #c0304f 60%);
+     border-image: linear-gradient(to right, #c0304f 65%, white 38%, white 75%, #c0304f 60%);
+  border-image-slice: 1;
 }
 nav button {
-  order: -1;
   border: none !important;
+}
+nav .route-container:hover {
+  cursor: pointer;
 }
 nav .route-container a,
 nav .route-container span {
   color: #232526;
   font-size: 0.6rem;
 }
-nav .route-container a.active,
-nav .route-container span.active {
+nav .route-container a:hover {
   color: #747a82;
 }
 
@@ -90,7 +96,7 @@ nav .route-container span.active {
   color: #232526;
 }
 #services .row > .card-container .card-wrapper .card > p {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: #747a82;
 }
 #services .row > .card-container .card-wrapper .card .learn-more {
@@ -352,6 +358,10 @@ footer .container-fluid:last-child .copyright-row .icon-container {
   footer > .container-fluid:nth-child(2) .footer-body .row .links-col:nth-child(4) {
     width: 34% !important;
   }
+  footer > .container-fluid:nth-child(2) .footer-body .row .links-col button {
+    padding-top: 0.7rem !important;
+    padding-bottom: 0.7rem !important;
+  }
 }
 @media (min-width: 992px) {
   nav {
@@ -369,9 +379,6 @@ footer .container-fluid:last-child .copyright-row .icon-container {
   }
   nav .nav-link img {
     height: 1rem !important;
-  }
-  nav button {
-    order: unset;
   }
   nav .router-navbar-collapse {
     position: absolute;
@@ -412,7 +419,6 @@ footer .container-fluid:last-child .copyright-row .icon-container {
   }
   #events .row .card-container .card-wrapper .card-body .content {
     flex: 9;
-    gap: 1rem;
   }
   #events .row .card-container .card-wrapper .card-body .content > h4 {
     font-size: 0.9rem;
