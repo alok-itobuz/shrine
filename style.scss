@@ -3,7 +3,14 @@
 $font_poppins: "Poppins", sans-serif;
 $font-roboto: "Roboto Serif", serif;
 
-* {
+$red_color: #c0304f;
+$dark_blue_color: #232526;
+$light_blue_color: #747a82;
+$very_light_blue_color: #ecf2ff;
+$very_light_orange_color: #ffe6e0;
+$white_color: #fcfcfc;
+$dark_white_color: #dddddd;
+$light_sky_color: #333739 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -19,17 +26,17 @@ body {
 @mixin sectionHeadingDescription {
   > h2 {
     font-size: 1.2rem;
-    color: #232526;
-    border-left: 3px solid #c0304f;
+    color: $dark_blue_color;
+    border-left: 3px solid $red_color;
     font-family: $font-roboto;
   }
   > p {
-    color: #747a82;
+    color: $light_blue_color;
     font-size: 0.85rem;
   }
   @media (min-width: 768px) {
     > h2 {
-      border-left: 5px solid #c0304f;
+      border-left: 5px solid $red_color;
       font-size: 1.7rem;
     }
     > p {
@@ -51,7 +58,7 @@ nav {
       .nav-link {
         font-size: 0.6rem;
         width: fit-content;
-        color: #232526;
+        color: $dark_blue_color;
       }
     }
   }
@@ -68,10 +75,10 @@ nav {
     &:not(.button):hover {
       border-image: linear-gradient(
         to right,
-        #c0304f 65%,
+        $red_color 65%,
         white 38%,
         white 75%,
-        #c0304f 60%
+        $red_color 60%
       );
       border-image-slice: 1;
     }
@@ -81,11 +88,11 @@ nav {
     span {
       top: 0.4rem;
       right: -1.3rem;
-      background: #c0304f;
+      background: $red_color;
       aspect-ratio: 1/1;
       font-size: 0.6rem;
       height: 1rem;
-      color: #ecf2ff;
+      color: $very_light_blue_color;
     }
   }
   button {
@@ -96,11 +103,11 @@ nav {
       cursor: pointer;
     }
     a {
-      color: #232526;
+      color: $dark_blue_color;
       font-size: 0.6rem;
     }
     a:hover {
-      color: #747a82;
+      color: $light_blue_color;
     }
   }
 }
@@ -139,22 +146,22 @@ nav {
         aspect-ratio: 50/51;
         max-width: 20rem;
         .card {
-          background: #ffe6e0;
+          background: $very_light_orange_color;
           border: none;
           border-radius: 2rem 2rem 2rem 0;
           .card-icon {
             height: 6rem;
             aspect-ratio: 1/1;
             border-radius: 50%;
-            background: #fcfcfc;
+            background: $white_color;
           }
           > h3 {
             font-size: 1.2rem;
-            color: #232526;
+            color: $dark_blue_color;
           }
           > p {
             font-size: 0.75rem;
-            color: #747a82;
+            color: $light_blue_color;
           }
           .learn-more {
             height: fit-content;
@@ -166,7 +173,7 @@ nav {
               height: 100%;
               aspect-ratio: 1/1;
               border-radius: 50%;
-              background: #c0304f;
+              background: $red_color;
             }
           }
         }
@@ -186,7 +193,7 @@ nav {
         max-width: 21rem;
         .card-body {
           border-radius: 6px;
-          border: 1px solid #dddddd;
+          border: 1px solid $dark_white_color;
           .image {
             height: 33%;
             flex: 6;
@@ -210,7 +217,7 @@ nav {
               .time,
               .location {
                 font-size: 0.8rem;
-                color: #747a82;
+                color: $light_blue_color;
                 width: fit-content;
               }
             }
@@ -219,13 +226,13 @@ nav {
             }
             > p {
               font-size: 0.9rem;
-              color: #747a82;
+              color: $light_blue_color;
             }
             > button {
               width: fit-content;
               font-size: 0.8rem;
-              background: #232526;
-              color: #fcfcfc;
+              background: $dark_blue_color;
+              color: $white_color;
             }
           }
         }
@@ -237,13 +244,13 @@ nav {
         font-size: 0.7rem;
         height: 100%;
         aspect-ratio: 1/1;
-        border: 1px solid #ddd;
-        color: #232526;
+        border: 1px solid $dark_white_color;
+        color: $dark_blue_color;
 
         &.active {
-          border: 1px solid #c0304f;
-          background: #c0304f;
-          color: #fcfcfc;
+          border: 1px solid $red_color;
+          background: $red_color;
+          color: $white_color;
         }
       }
     }
@@ -253,7 +260,7 @@ nav {
 footer {
   background: url(./images/footer/footer_bg.png);
   > .container-fluid:first-child {
-    border-bottom: 1px solid #333739;
+    border-bottom: 1px solid $light_sky_color;
     .footer-logo-row {
       .logo-container {
         height: 2rem;
@@ -265,12 +272,12 @@ footer {
     }
   }
   > .container-fluid:nth-child(2) {
-    border-bottom: 1px solid #333739;
+    border-bottom: 1px solid $light_sky_color;
     .footer-body {
       .row {
         .links-col {
           > h5 {
-            color: #fcfcfc;
+            color: $white_color;
             font-size: 0.8rem;
           }
           > p,
@@ -287,8 +294,8 @@ footer {
           button {
             width: fit-content;
             font-size: 0.7rem;
-            color: #fcfcfc;
-            background: #c0304f;
+            color: $white_color;
+            background: $red_color;
           }
         }
       }
@@ -424,7 +431,7 @@ footer {
 @media (min-width: 992px) {
   nav {
     height: 4rem;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid $dark_white_color;
     .navbar-brand {
       background: #fff;
       position: absolute;

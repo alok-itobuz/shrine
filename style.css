@@ -235,7 +235,7 @@ nav .route-container a:hover {
   font-size: 0.7rem;
   height: 100%;
   aspect-ratio: 1/1;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   color: #232526;
 }
 #events .row .event-pagination > button.active {
@@ -405,7 +405,7 @@ footer .container-fluid:last-child .copyright-row .icon-container {
 @media (min-width: 992px) {
   nav {
     height: 4rem;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #dddddd;
   }
   nav .navbar-brand {
     background: #fff;
