@@ -361,7 +361,7 @@ footer .container-fluid:last-child .copyright-row .icon-container {
   nav .navbar-brand {
     background: #fff;
     position: absolute;
-    top: 0.2rem;
+    top: 1.3rem;
     left: 50%;
     transform: translateX(-50%);
     margin-right: 0 !important;
