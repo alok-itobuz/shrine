@@ -10,15 +10,19 @@ $very_light_blue_color: #ecf2ff;
 $very_light_orange_color: #ffe6e0;
 $white_color: #fcfcfc;
 $dark_white_color: #dddddd;
-$light_sky_color: #333739 * {
+$light_sky_color: #333739;
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: $font_poppins;
   overflow-x: hidden;
 }
+
 .font-roboto {
   font-family: $font-roboto !important;
 }
@@ -30,28 +34,34 @@ body {
     border-left: 3px solid $red_color;
     font-family: $font-roboto;
   }
+
   > p {
     color: $light_blue_color;
     font-size: 0.85rem;
   }
+
   @media (min-width: 768px) {
     > h2 {
       border-left: 5px solid $red_color;
       font-size: 1.7rem;
     }
+
     > p {
       font-size: 0.8rem;
     }
   }
+
   @media (min-width: 992px) {
     > h2 {
       font-size: 2.1rem;
     }
+
     > p {
       font-size: 0.85rem;
     }
   }
 }
+
 nav {
   .nav-links-container {
     .navbar-collapse {
@@ -62,16 +72,20 @@ nav {
       }
     }
   }
+
   .navbar-brand {
     height: 2rem;
     overflow: hidden;
+
     img {
       height: 100%;
     }
   }
+
   .nav-link {
     height: 1.5rem;
     border-bottom: 2px solid transparent;
+
     &:not(.button):hover {
       border-image: linear-gradient(
         to right,
@@ -82,9 +96,11 @@ nav {
       );
       border-image-slice: 1;
     }
+
     > img {
       height: 1rem !important;
     }
+
     span {
       top: 0.4rem;
       right: -1.3rem;
@@ -95,17 +111,21 @@ nav {
       color: $very_light_blue_color;
     }
   }
+
   button {
     border: none !important;
   }
+
   .route-container {
     &:hover {
       cursor: pointer;
     }
+
     a {
       color: $dark_blue_color;
       font-size: 0.6rem;
     }
+
     a:hover {
       color: $light_blue_color;
     }
@@ -117,12 +137,14 @@ nav {
   aspect-ratio: 1/1;
   right: 0;
   top: 25rem;
+
   &.services-side-image {
     height: 25rem;
     right: unset;
     left: 0;
     top: 70rem;
   }
+
   &.events-side-image {
     top: unset;
     bottom: 22rem;
@@ -133,6 +155,7 @@ nav {
   .house-image-container {
     height: 13rem;
   }
+
   .book-pen-image-container {
     height: 26rem;
   }
@@ -141,34 +164,42 @@ nav {
 #services {
   .row {
     @include sectionHeadingDescription();
+
     > .card-container {
       .card-wrapper {
         aspect-ratio: 50/51;
         max-width: 20rem;
+
         .card {
           background: $very_light_orange_color;
           border: none;
           border-radius: 2rem 2rem 2rem 0;
+
           .card-icon {
             height: 6rem;
             aspect-ratio: 1/1;
             border-radius: 50%;
             background: $white_color;
           }
+
           > h3 {
             font-size: 1.2rem;
             color: $dark_blue_color;
           }
+
           > p {
             font-size: 0.75rem;
             color: $light_blue_color;
           }
+
           .learn-more {
             height: fit-content;
+
             h6 {
               font-size: 0.9rem;
               line-height: 1.3;
             }
+
             .right-arrow {
               height: 100%;
               aspect-ratio: 1/1;
@@ -187,16 +218,20 @@ nav {
     .event-heading-container {
       @include sectionHeadingDescription();
     }
+
     .card-container {
       .card-wrapper {
         aspect-ratio: 7/10;
         max-width: 21rem;
+
         .card-body {
           border-radius: 6px;
           border: 1px solid $dark_white_color;
+
           .image {
             height: 33%;
             flex: 6;
+
             .icon-container {
               height: 1.8rem;
               border-radius: 7px 7px 0 0;
@@ -205,12 +240,15 @@ nav {
               left: 4%;
             }
           }
+
           .content {
             flex: 9;
             gap: 1rem;
+
             > h4 {
               font-size: 0.9rem;
             }
+
             .time-location {
               height: 1.1rem;
 
@@ -221,13 +259,16 @@ nav {
                 width: fit-content;
               }
             }
+
             > h3 {
               font-size: 1.3rem;
             }
+
             > p {
               font-size: 0.9rem;
               color: $light_blue_color;
             }
+
             > button {
               width: fit-content;
               font-size: 0.8rem;
@@ -238,8 +279,10 @@ nav {
         }
       }
     }
+
     .event-pagination {
       height: 1.5rem;
+
       > button {
         font-size: 0.7rem;
         height: 100%;
@@ -259,20 +302,25 @@ nav {
 
 footer {
   background: url(./images/footer/footer_bg.png);
+
   > .container-fluid:first-child {
     border-bottom: 1px solid $light_sky_color;
+
     .footer-logo-row {
       .logo-container {
         height: 2rem;
       }
+
       > p {
         font-size: 0.75rem;
         color: #929292;
       }
     }
   }
+
   > .container-fluid:nth-child(2) {
     border-bottom: 1px solid $light_sky_color;
+
     .footer-body {
       .row {
         .links-col {
@@ -280,17 +328,20 @@ footer {
             color: $white_color;
             font-size: 0.8rem;
           }
+
           > p,
           a {
             text-decoration: none;
             color: #929292;
             font-size: 0.7rem;
           }
+
           input {
             font-size: 0.7rem;
             background: #2f3032;
             color: #626366;
           }
+
           button {
             width: fit-content;
             font-size: 0.7rem;
@@ -301,12 +352,14 @@ footer {
       }
     }
   }
+
   .container-fluid:last-child {
     .copyright-row {
       > p {
         color: #929292;
         font-size: 0.7rem;
       }
+
       .icon-container {
         height: 1.2rem;
         max-width: 15rem;
@@ -314,6 +367,7 @@ footer {
     }
   }
 }
+
 @media (min-width: 768px) {
   nav {
     .nav-links-container {
@@ -324,37 +378,47 @@ footer {
       }
     }
   }
+
   #hero {
     .house-image-container {
       height: 25rem;
     }
+
     .book-pen-image-container {
       height: 25rem;
+
       .image:first-child {
         height: 60% !important;
       }
+
       .image:last-child {
         height: 40% !important;
       }
     }
   }
+
   #services {
     .row {
       > .card-container {
         .card-wrapper {
           max-width: unset;
+
           .card {
             .card-icon {
               height: 4rem;
             }
+
             > h3 {
               font-size: 1rem;
             }
+
             > p {
               font-size: 0.56rem;
             }
+
             .learn-more {
               height: 1rem;
+
               h6 {
                 font-size: 0.7rem;
               }
@@ -364,32 +428,40 @@ footer {
       }
     }
   }
+
   #events {
     .row {
       .event-heading-container {
         @include sectionHeadingDescription();
+
         p {
           width: 45%;
         }
       }
+
       .card-container {
         .card-wrapper {
           aspect-ratio: 7/11;
           max-width: 25rem;
+
           .card-body {
             .image {
               flex: 6;
+
               .icon-container {
                 height: 1.8rem;
                 bottom: 0;
                 left: 4%;
               }
             }
+
             .content {
               gap: 0.7rem;
+
               > h4 {
                 font-size: 0.75rem;
               }
+
               .time-location {
                 height: 1rem;
 
@@ -398,12 +470,15 @@ footer {
                   font-size: 0.65rem;
                 }
               }
+
               > h3 {
                 font-size: 1rem;
               }
+
               > p {
                 font-size: 0.7rem;
               }
+
               > button {
                 font-size: 0.75rem;
               }
@@ -413,14 +488,17 @@ footer {
       }
     }
   }
+
   footer {
     > .container-fluid:nth-child(2) .footer-body .row .links-col {
       &:not(:nth-child(4)) {
         width: 22% !important;
       }
+
       &:nth-child(4) {
         width: 34% !important;
       }
+
       button {
         padding-top: 0.7rem !important;
         padding-bottom: 0.7rem !important;
@@ -428,10 +506,12 @@ footer {
     }
   }
 }
+
 @media (min-width: 992px) {
   nav {
     height: 4rem;
     border-bottom: 2px solid $dark_white_color;
+
     .navbar-brand {
       background: #fff;
       position: absolute;
@@ -446,6 +526,7 @@ footer {
       img {
         height: 1rem !important;
       }
+
       span {
         font-size: 0.9rem;
         height: 1.5rem;
@@ -453,39 +534,48 @@ footer {
         left: 100%;
       }
     }
+
     .router-navbar-collapse {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
       top: 6.5rem;
+
       a {
         font-size: 0.7rem;
       }
     }
   }
+
   #hero {
     .house-image-container,
     .book-pen-image-container {
       height: 35rem;
     }
   }
+
   #services {
     .row {
       > .card-container {
         .card-wrapper {
           max-width: 22rem;
+
           .card {
             .card-icon {
               height: 6rem;
             }
+
             > h3 {
               font-size: 1.4rem;
             }
+
             > p {
               font-size: 0.75rem;
             }
+
             .learn-more {
               height: 1.3rem;
+
               h6 {
                 font-size: 0.9rem;
               }
@@ -495,22 +585,27 @@ footer {
       }
     }
   }
+
   #events {
     .row {
       .card-container {
         .card-wrapper {
           aspect-ratio: 7/10;
+
           .card-body {
             .image {
               .icon-container {
                 height: 1.8rem;
               }
             }
+
             .content {
               flex: 9;
+
               > h4 {
                 font-size: 0.9rem;
               }
+
               .time-location {
                 height: 1.1rem;
 
@@ -519,12 +614,15 @@ footer {
                   font-size: 0.8rem;
                 }
               }
+
               > h3 {
                 font-size: 1.3rem;
               }
+
               > p {
                 font-size: 0.9rem;
               }
+
               > button {
                 font-size: 0.8rem;
               }
